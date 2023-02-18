@@ -1,0 +1,3 @@
+displayName = Allomancy MOD
+author = Andriu
+version = 0.1
