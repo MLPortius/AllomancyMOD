@@ -1,0 +1,5 @@
+D:\Users\Andriu\Documents\My Games\Terraria\tModLoader\ModSources\AllomancyMOD\obj\Debug\net6.0\AllomancyMOD.csproj.AssemblyReference.cache
+D:\Users\Andriu\Documents\My Games\Terraria\tModLoader\ModSources\AllomancyMOD\obj\Debug\net6.0\AllomancyMOD.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Andriu\Documents\My Games\Terraria\tModLoader\ModSources\AllomancyMOD\obj\Debug\net6.0\AllomancyMOD.AssemblyInfoInputs.cache
+D:\Users\Andriu\Documents\My Games\Terraria\tModLoader\ModSources\AllomancyMOD\obj\Debug\net6.0\AllomancyMOD.AssemblyInfo.cs
+D:\Users\Andriu\Documents\My Games\Terraria\tModLoader\ModSources\AllomancyMOD\obj\Debug\net6.0\AllomancyMOD.csproj.CoreCompileInputs.cache
