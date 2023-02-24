@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uEdo4Xk+GuhVQ7/IJfFjZEUIWBH5AKF40bM9Ar9/XB335+B1+8k5vlJ55XE1r8NPp1zvvzfjwh1O6jm/5RnrBg==",
+  "dgSpecHash": "DKfnIQJlsjiskONbDfm925SihJFr8iCTsqLIYpLrENDPwIfZVH5AT5AqM5+1M55Fs9KE2w46dXTch2QPx626Ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
+  "projectFilePath": "D:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andriu\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],

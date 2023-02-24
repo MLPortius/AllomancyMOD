@@ -39,9 +39,8 @@ namespace AllomancyMOD.Content.Items.Accesories
         {
             // Since we're using DamageClass.Generic, these bonuses apply to ALL damage the player deals.
             player.GetDamage(DamageClass.Generic) += 0.50f;
+            player.jumpSpeedBoost += 3;
 
-            player.jump += 5;
-            //player.jumpSpeedBoost *= 10;
         }
     }
 }

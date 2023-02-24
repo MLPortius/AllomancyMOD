@@ -36,11 +36,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
+      "projectUniqueName": "D:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
       "projectName": "AllomancyMOD",
-      "projectPath": "C:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
+      "projectPath": "D:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\AllomancyMOD.csproj",
       "packagesPath": "C:\\Users\\Andriu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\obj\\",
+      "outputPath": "D:\\Users\\Andriu\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AllomancyMOD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Andriu\\AppData\\Roaming\\NuGet\\NuGet.Config",
