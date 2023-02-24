@@ -26,7 +26,7 @@ namespace AllomancyMOD.Content.Items.Weapons
 
             // USING ANIMATION
             Item.useStyle = ItemUseStyleID.Swing; // The useStyle of the Item.
-            Item.useAnimation = 30; // The time span of the using animation of the weapon, suggest setting it the same as useTime.
+            Item.useAnimation = 45; // The time span of the using animation of the weapon, suggest setting it the same as useTime.
             Item.useTime = 45; // Swing Cooldown, the time span of using the weapon. Remember in terraria, 60 frames is a second.
             Item.autoReuse = false; // Whether the weapon can be used more than once automatically by holding the use button.
             
@@ -40,6 +40,8 @@ namespace AllomancyMOD.Content.Items.Weapons
             Item.value = Item.buyPrice(gold: 1); // The value of the weapon in copper coins.
             Item.rare = ItemRarityID.Purple; // Give this item our custom rarity.
             Item.UseSound = SoundID.Item1; // The sound when the weapon is being used.
+
+            bool isMetal = true;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
