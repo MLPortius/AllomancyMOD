@@ -3,11 +3,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using AllomancyMOD.Common.Players;
 
 namespace AllomancyMOD.Content.Items.Consumables
 {
     internal class Small_Pewter_Flask : ModItem
     {
+
+        private int PewterHealing;
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Small Pewter Flask");
@@ -24,15 +28,50 @@ namespace AllomancyMOD.Content.Items.Consumables
             Item.consumable = true;
 
             Item.useStyle = ItemUseStyleID.DrinkLiquid;
-            Item.useAnimation = 17;
-            Item.useTime = 17;
+            Item.useAnimation = 60;
+            Item.useTime = 60;
             Item.useTurn = true;
             Item.UseSound = SoundID.Item3;
             Item.maxStack = 16;
 
-            Item.healMana = 100;
-
+            PewterHealing = 10;
         }
 
+        public override bool CanUseItem(Player player)
+        {
+            var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
+
+            if (aPewterPlayer.PewterCurrent < aPewterPlayer.NewPewterMax)
+            {
+                return true;
+            }
+                
+            return false;
+        }
+
+        
+        public override bool? UseItem(Player player)
+        {
+
+            var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
+
+            int dif = aPewterPlayer.NewPewterMax - aPewterPlayer.PewterCurrent;
+
+            if (dif < PewterHealing)
+            {
+                aPewterPlayer.PewterCurrent += dif;
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, dif); 
+                return true;
+            }
+
+            else
+            {
+                aPewterPlayer.PewterCurrent += PewterHealing;
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, PewterHealing);
+                return true;
+            }
+
+            
+        }
     }
 }
