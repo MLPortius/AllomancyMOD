@@ -8,6 +8,9 @@ namespace AllomancyMOD.Content.Items.Weapons
 {
     internal class KolossSword : ModItem
     {
+
+        public bool IsMetal() {return true;}
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Koloss Sword");
@@ -41,7 +44,6 @@ namespace AllomancyMOD.Content.Items.Weapons
             Item.rare = ItemRarityID.Purple; // Give this item our custom rarity.
             Item.UseSound = SoundID.Item1; // The sound when the weapon is being used.
 
-            bool isMetal = true;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)

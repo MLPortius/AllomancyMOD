@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using AllomancyMOD.Content.Items.Weapons;
 
 namespace AllomancyMOD.Content.Items.Tools
 {
@@ -33,16 +34,23 @@ namespace AllomancyMOD.Content.Items.Tools
             Item.autoReuse = false;
 
             Item.color = new Color(250, 0, 0, 0.5f);
-            Item.alpha = 200;
+            Item.alpha = 128;
         }
 
 
         public override void UseAnimation(Player player)
         {
-            ModItem ks = ModContent.GetInstance<Items.Weapons.KolossSword>();
-            player.QuickSpawnItem(player.GetSource_FromThis(), ks.Type, 1);
+
+            // VANILLA ITEM
+            player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, 1);
+
+            // MOD ITEM
             
-        }
+            KolossSword ks = ModContent.GetInstance<Items.Weapons.KolossSword>();
+            // player.QuickSpawnItem(player.GetSource_FromThis(), ks.Type, 1);
+
+            if ks.IsMetal == true:
+
 
     }
 }
