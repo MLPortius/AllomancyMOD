@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using AllomancyMOD.Common.Players;
+using System;
 
 namespace AllomancyMOD.Content.Items.DevTools
 {
@@ -48,10 +49,11 @@ namespace AllomancyMOD.Content.Items.DevTools
         {
             var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
 
+            
             if (player.altFunctionUse == 2) //Sets what happens on right click(special ability)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, aPewterPlayer.PewterCurrent);
-                Item.UseSound = SoundID.Item3;
+                CombatText.NewText(location: player.Hitbox, amount: aPewterPlayer.PewterCurrent, color: new Color(255,0,0,0.5f)) ;
+                Item.UseSound = SoundID.Item116;
                 return true;
             }
 
