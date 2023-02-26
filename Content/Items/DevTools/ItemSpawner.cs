@@ -3,8 +3,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using AllomancyMOD.Content.Items.Weapons;
+using System;
 
-namespace AllomancyMOD.Content.Items.Tools
+namespace AllomancyMOD.Content.Items.DevTools
 {
     internal class ItemSpawner : ModItem
     {
@@ -17,7 +18,7 @@ namespace AllomancyMOD.Content.Items.Tools
 
         public override void AddRecipes()
         {
-            var recipe = ModContent.GetInstance<Items.Tools.ItemSpawner>();
+            var recipe = ModContent.GetInstance<Items.DevTools.ItemSpawner>();
             recipe.CreateRecipe()
                 .AddIngredient(ItemID.Wood, 1)
                 .Register();
@@ -42,15 +43,25 @@ namespace AllomancyMOD.Content.Items.Tools
         {
 
             // VANILLA ITEM
-            player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, 1);
+            // player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, 1);
 
             // MOD ITEM
-            
+
             KolossSword ks = ModContent.GetInstance<Items.Weapons.KolossSword>();
             // player.QuickSpawnItem(player.GetSource_FromThis(), ks.Type, 1);
 
-            if ks.IsMetal == true:
+            bool im = ks.IsMetal();
 
+            if (im == true)
+            {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, 1);
+            }
+
+            else
+            {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Wood, 1);
+            }
+        }
 
     }
 }
