@@ -14,7 +14,6 @@ namespace AllomancyMOD.Common.Players
         public int NewPewterMax;                    // Used to update the maximun value - exampleResourceMax2
         public float PewterRegenRate;               // Resource regeneration rate - exampleResourceRegenRate
         internal int PewterRegenTimer = 0;          // Timer variable for regeneration - exampleResourceRegenTimer
-        public static readonly Color HealPewter = new(216, 200, 180); // Restoration color when restore resource - HealExampleResource
 
         public override void Initialize()
         {

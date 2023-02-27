@@ -10,4 +10,20 @@
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Content\isMetalArray.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>isMetalArray.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Content\isMetalArray.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>isMetalArray.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using AllomancyMOD.Common.Players;
+using AllomancyMOD.Content;
 
 namespace AllomancyMOD.Content.Items.Consumables
 {
@@ -45,8 +46,12 @@ namespace AllomancyMOD.Content.Items.Consumables
             {
                 return true;
             }
-                
-            return false;
+            
+            else
+            {
+                CombatText.NewText(location: player.Hitbox, text: "Already max pewter", color: Color.Gray);
+                return false;
+            }
         }
 
         
@@ -59,19 +64,17 @@ namespace AllomancyMOD.Content.Items.Consumables
 
             if (dif < PewterHealing)
             {
+                CombatText.NewText(location: player.Hitbox, text: $"{dif} pewter", color: GlobalColors.Pewter);
                 aPewterPlayer.PewterCurrent += dif;
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, dif); 
                 return true;
             }
 
             else
             {
+                CombatText.NewText(location: player.Hitbox, text: $"{PewterHealing} pewter", color: GlobalColors.Pewter);
                 aPewterPlayer.PewterCurrent += PewterHealing;
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, PewterHealing);
                 return true;
-            }
-
-            
+            } 
         }
     }
 }

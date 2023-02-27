@@ -41,12 +41,7 @@ namespace AllomancyMOD.Content.Items.DevTools
 
         public override void UseAnimation(Player player)
         {
-
-            // VANILLA ITEM
-            // player.QuickSpawnItem(player.GetSource_FromThis(), ItemID.Gel, 1);
-
             // MOD ITEM
-
             KolossSword ks = ModContent.GetInstance<Items.Weapons.KolossSword>();
             // player.QuickSpawnItem(player.GetSource_FromThis(), ks.Type, 1);
 
