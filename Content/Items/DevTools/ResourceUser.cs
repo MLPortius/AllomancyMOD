@@ -52,7 +52,7 @@ namespace AllomancyMOD.Content.Items.DevTools
             
             if (player.altFunctionUse == 2) //Sets what happens on right click(special ability)
             {
-                CombatText.NewText(location: player.Hitbox, amount: aPewterPlayer.PewterCurrent, color: new Color(255,0,0,0.5f)) ;
+                CombatText.NewText(location: player.Hitbox, text: $"{aPewterPlayer.PewterCurrent} pewter", color: new Color(255,0,0,0.5f));
                 Item.UseSound = SoundID.Item116;
                 return true;
             }
@@ -61,9 +61,15 @@ namespace AllomancyMOD.Content.Items.DevTools
             {
                 if (aPewterPlayer.PewterCurrent >= AllomanticPewterCost)
                 {
+                    CombatText.NewText(location: player.Hitbox, text: $"{-AllomanticPewterCost} total pewter", color: new Color(255, 0, 0, 0.5f));
                     Item.UseSound = SoundID.Research;
                     aPewterPlayer.PewterCurrent -= AllomanticPewterCost;
                     return true;
+                }
+
+                else
+                {
+                    CombatText.NewText(location: player.Hitbox, text: "Not enought pewter", color: Color.Gray);
                 }
             }
 
