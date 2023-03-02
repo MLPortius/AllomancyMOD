@@ -7,6 +7,7 @@ using Terraria.ObjectData;
 
 namespace AllomancyMOD.Content.Tiles
 {
+
     public class MetalGrinder_Tile : ModTile
     {
         public override void SetStaticDefaults()
