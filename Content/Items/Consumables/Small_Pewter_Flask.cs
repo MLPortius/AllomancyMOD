@@ -24,8 +24,8 @@ namespace AllomancyMOD.Content.Items.Consumables
         {
             Item.width = 12;
             Item.height = 30;
-            Item.value = Item.buyPrice(silver: 50);
-            Item.rare = ItemRarityID.Purple;
+            Item.value = Item.buyPrice(copper: 50); // TEMPORAL
+            Item.rare = ItemRarityID.Purple;        // TEMPORAL
             Item.consumable = true;
 
             Item.useStyle = ItemUseStyleID.DrinkLiquid;

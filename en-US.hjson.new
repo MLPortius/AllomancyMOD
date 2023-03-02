@@ -1,0 +1,68 @@
+
+Mods: {
+	AllomancyMOD: {
+		Items: {
+			Misthood: {
+				DisplayName: Misthood
+				Tooltip:
+					'''
+
+					Increases maximun jump by 100
+					Increases damage by 50%
+					Decreases allomancy burning by 50%
+					'''
+			}
+
+			Small_Pewter_Flask: {
+				DisplayName: Small Pewter Flask
+				Tooltip: Contains 25 of pewter dust...
+			}
+
+			ItemSpawner: {
+				DisplayName: Developing Tool
+				Tooltip: isMetal bool...
+			}
+
+			ResourceUser: {
+				DisplayName: Developing Tool
+				Tooltip: Pewter resource usage...
+			}
+
+			Allomantic_Pewter_Bar: {
+				DisplayName: Allomantic Pewter Bar
+				Tooltip:
+					'''
+					'An invested metal bar, useful for allomancy and maybe more...'
+					It contains 100 units of pewter dust.
+					'''
+			}
+
+			Empty_Small_Flask: {
+				DisplayName: Empty Small Flask
+				Tooltip: A usefull empty flask for an allomancer...
+			}
+
+			Filled_Small_Flask: {
+				DisplayName: Filled Small Flask
+				Tooltip: A usefull water flask for an allomancer...
+			}
+
+			Tiny_Investiture_Spark: {
+				DisplayName: Tiny Investiture Spark
+				Tooltip: "'A tiny splinter of the investiture inside all living beings...'"
+			}
+
+			KolossSword: {
+				DisplayName: Koloss Sword
+				Tooltip:
+					'''
+
+					A huge forged sword designed for Koloss creatures
+
+
+					Even the smallest being could use it with a bit of allomantic pewter...
+					'''
+			}
+		}
+	}
+}

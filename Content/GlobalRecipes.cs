@@ -22,7 +22,6 @@ namespace AllomancyMOD.Content
                 .AddIngredient(ItemID.Acorn, 1)
                 .Register();
 
-
         }
     }
 }
