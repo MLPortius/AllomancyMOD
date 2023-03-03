@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 namespace AllomancyMOD.Content.Tiles
 {
 
-    public class MetalGrinder_Tile : ModTile
+    public class MetalExchanger_Tile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -24,14 +24,14 @@ namespace AllomancyMOD.Content.Tiles
             AdjTiles = new int[] { TileID.WorkBenches };
 
             // Placement
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
             TileObjectData.addTile(Type);
 
             // Etc
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Metal Grinder");
+            name.SetDefault("Metal Exchanger");
             AddMapEntry(new Color(200, 200, 200), name);
 
         }
@@ -43,7 +43,7 @@ namespace AllomancyMOD.Content.Tiles
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 34, 34, ModContent.ItemType<Items.Stations.MetalGrinder>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 34, 34, ModContent.ItemType<Items.Stations.MetalExchanger>());
         }
     }
 }
