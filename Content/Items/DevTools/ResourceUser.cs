@@ -7,7 +7,7 @@ using System;
 
 namespace AllomancyMOD.Content.Items.DevTools
 {
-    internal class ResourceUser : ModItem
+    public class ResourceUser : ModItem
     {
 
         private int AllomanticPewterCost;

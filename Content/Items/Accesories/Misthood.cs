@@ -6,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace AllomancyMOD.Content.Items.Accesories
 {
     // Heredo la clase desde la libreria Terraria.ModLoader
-    internal class Misthood : ModItem
+    public class Misthood : ModItem
     {
 
         // Item's information as DisplayName and Tooltip

@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 
 namespace AllomancyMOD.Common.Players
 {
-    internal class AllomanticPewterPlayer : ModPlayer
+    public class AllomanticPewterPlayer : ModPlayer
     {
 
         public int PewterCurrent;                   // Controls the current value of the resource - exampleResourceCurrent

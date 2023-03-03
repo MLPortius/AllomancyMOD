@@ -7,7 +7,7 @@ using System;
 
 namespace AllomancyMOD.Content.Items.DevTools
 {
-    internal class ItemSpawner : ModItem
+    public class ItemSpawner : ModItem
     {
 
         public override void SetStaticDefaults()

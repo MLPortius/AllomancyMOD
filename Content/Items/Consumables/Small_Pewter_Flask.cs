@@ -8,7 +8,7 @@ using AllomancyMOD.Content;
 
 namespace AllomancyMOD.Content.Items.Consumables
 {
-    internal class Small_Pewter_Flask : ModItem
+    public class Small_Pewter_Flask : ModItem
     {
 
         private int PewterHealing;
