@@ -9,26 +9,29 @@ namespace AllomancyMOD.Common.Players
     {
 
         public bool Pewter;
-        public bool Copper;
-        public bool Tin;
-        public bool Iron;
-        public bool Steel;
+        private bool InitialPewter;
+
+//        public bool Copper;
+//        public bool Tin;
+//        public bool Iron;
+//        public bool Steel;
 
 
         public override void Initialize()
         {
             Pewter = false;
-            Copper = false;
-            Tin = false;
-            Iron = false;
-            Steel = false;            
+            InitialPewter = Pewter;
+//            Copper = false;
+//            Tin = false;
+//            Iron = false;
+//            Steel = false;
         }
 
         public override void SaveData(TagCompound tag)
         {
-            if (Pewter == true)
+            if (Pewter != InitialPewter)
             {
-                tag.Add("Pewter", Pewter);
+                tag.Set("Pewter", Pewter);
             }
             
         }
@@ -38,23 +41,7 @@ namespace AllomancyMOD.Common.Players
             if (tag.ContainsKey("Pewter"))
             {
                 Pewter = tag.GetBool("Pewter");
-            }
-            
-        }
-
-        public override void PreUpdateBuffs()
-        {            
-
-            if (Pewter == true)
-            {
-                bool hboff = Player.HasBuff(ModContent.BuffType<PewterAllomancyBuff_Off>());
-                bool hbon = Player.HasBuff(ModContent.BuffType<PewterAllomancyBuff_Burn>());
-
-                if (hboff == false || hbon == true) 
-                {
-                    int timerSeconds = 60 /*seconds*/ * 60 /*minutes*/* 16 /*hours*/;
-                    Player.AddBuff(type: ModContent.BuffType<PewterAllomancyBuff_Off>(), timeToAdd: 60 * timerSeconds);
-                }
+                InitialPewter = Pewter;
             }
         }
     }

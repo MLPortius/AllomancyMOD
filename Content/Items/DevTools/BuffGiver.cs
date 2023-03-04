@@ -1,9 +1,11 @@
-﻿using Terraria;
+﻿using System;
+using Microsoft.Xna.Framework;
+
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
+
 using AllomancyMOD.Content.Items.Weapons;
-using System;
 using AllomancyMOD.Common.Players;
 
 namespace AllomancyMOD.Content.Items.DevTools
@@ -54,43 +56,15 @@ namespace AllomancyMOD.Content.Items.DevTools
             if (player.altFunctionUse == 2) //Sets what happens on right click(special ability)
             {
 
-                if (player.HasBuff(type: ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Burn>()))
-                {
-                    Item.UseSound = SoundID.LiquidsWaterLava;
-                    aPewterPlayer.Player.ClearBuff(type: ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Burn>());
-
-                    int timerSeconds = 60 /*seconds*/ * 60 /*minutes*/* 16 /*hours*/;
-                    aPewterPlayer.Player.AddBuff(type: ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Off>(), timeToAdd: 60 /*frames*/ * timerSeconds);
-
-                    return true;
-                }
-
-                else { return false; }
+                bool clearburn = aPewterPlayer.ClearBurn();
+                return clearburn;
             }
 
 
             else //Sets what happens on left click(normal use)
             {
-
-                if (allomantPlayer.Pewter == true)
-                {
-                    if (player.HasBuff(ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Off>()))
-                    {
-                        player.ClearBuff(ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Off>());
-                        Item.UseSound = SoundID.Item20;
-
-                        int timerSeconds = 60 /*seconds*/ * 60 /*minutes*/* 16 /*hours*/;
-                        aPewterPlayer.Player.AddBuff(type: ModContent.BuffType<Content.Buffs.PewterAllomancyBuff_Burn>(), timeToAdd: 60 /*frames*/ * timerSeconds);
-
-                        return true;
-                    }
-
-                    else
-                    {
-                        return false;
-                    }
-                }
-                return false;
+                bool startburn = aPewterPlayer.BurnPewter();
+                return startburn;
             }
         }
 

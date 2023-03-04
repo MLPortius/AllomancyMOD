@@ -1,6 +1,28 @@
 
 Mods: {
 	AllomancyMOD: {
+		Buffs: {
+			PewterAllomancyBuff_Burn: {
+				DisplayName: Pewter Allomancy
+				Description:
+					'''
+					Grants +8 defense,
+					Grants 5% melee damage.
+					Grants 16% melee speed.	Doubles jump height.
+					Doubles fall resist.
+					Grants 20% run acceleraion.
+					Grants 20% max run speed.
+					Decrease 16% run slowdown.
+					Grants 8% pick speed
+					'''
+			}
+
+			PewterAllomancyBuff_Off: {
+				DisplayName: Pewter Allomancy
+				Description: You are a Pewter Arm.
+			}
+		}
+
 		Items: {
 			Misthood: {
 				DisplayName: Misthood
@@ -16,6 +38,11 @@ Mods: {
 			Small_Pewter_Flask: {
 				DisplayName: Small Pewter Flask
 				Tooltip: Contains 25 of pewter dust...
+			}
+
+			BuffGiver: {
+				DisplayName: Buff Giver Develping Tool
+				Tooltip: Gives pewter burning buff...
 			}
 
 			ItemSpawner: {
@@ -37,6 +64,11 @@ Mods: {
 					'''
 			}
 
+			Allomantic_Pewter_Dust: {
+				DisplayName: Allomantic Pewter Dust
+				Tooltip: "'An invested metal dust, useful for allomancy and maybe more...'"
+			}
+
 			Empty_Small_Flask: {
 				DisplayName: Empty Small Flask
 				Tooltip: A usefull empty flask for an allomancer...
@@ -52,9 +84,27 @@ Mods: {
 				Tooltip: "'A tiny splinter of the investiture inside all living beings...'"
 			}
 
+			MetalExchanger: {
+				DisplayName: Metal Exchanger
+				Tooltip:
+					'''
+					Basic allomant tools for metal exchange...
+
+					Burn iron for pre-harmode advanced metal exchange.
+					Burn iron and steel for hardmode basic metal exchange.
+					Burn iron, steel and tin for hardmode advanced metal exchange.
+					Burn iron, steel, tin and pewter for atium exchange.
+					'''
+			}
+
 			MetalGrinder: {
 				DisplayName: Metal Grinder
 				Tooltip: You can use it to do dusty things...
+			}
+
+			MetallurgyTable: {
+				DisplayName: Metallurgy Table
+				Tooltip: Unleash the power of invested metals...
 			}
 
 			KolossSword: {
@@ -70,6 +120,10 @@ Mods: {
 			}
 		}
 
-		Tiles.MetalGrinder_Tile.MapEntry: Metal Grinder
+		Tiles: {
+			MetalExchanger_Tile.MapEntry: Metal Exchanger
+			MetalGrinder_Tile.MapEntry: Metal Grinder
+			MetallurgyTable_Tile.MapEntry: Metallurgy Table
+		}
 	}
 }
