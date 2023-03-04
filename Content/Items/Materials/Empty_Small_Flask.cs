@@ -5,7 +5,7 @@ using Terraria.GameContent.Creative;
 
 namespace AllomancyMOD.Content.Items.Materials
 {
-    internal class Empty_Small_Flask : ModItem
+    public class Empty_Small_Flask : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,16 +22,6 @@ namespace AllomancyMOD.Content.Items.Materials
             Item.rare = ItemRarityID.Purple;        // TEMPORAL
             Item.maxStack = 1616;
             Item.material = true;
-        }
-
-        public override void AddRecipes()
-        {
-            var resultItem = ModContent.GetInstance<Items.Materials.Empty_Small_Flask>();
-            resultItem.CreateRecipe()
-                .AddIngredient(ItemID.Glass, 10)
-                .AddRecipeGroup(RecipeGroupID.Wood, 10)
-                .AddTile(TileID.WorkBenches)
-                .Register();
         }
     }
 }

@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace AllomancyMOD.Content
 {
-    internal class isMetal
+    public class isMetal
     {
 
         private static short[] ids = { ItemID.IronBar, ItemID.IronAnvil };

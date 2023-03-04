@@ -11,7 +11,7 @@ namespace AllomancyMOD.Content.Items.Materials
     {
 
         public bool isMetal = true;
-        private float lightIntensity = 1.5f;
+        private float lightIntensity = 1.8f;
 
         public override void SetStaticDefaults()
         {

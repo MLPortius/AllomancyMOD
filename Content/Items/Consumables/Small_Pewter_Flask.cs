@@ -8,7 +8,7 @@ using AllomancyMOD.Content;
 
 namespace AllomancyMOD.Content.Items.Consumables
 {
-    internal class Small_Pewter_Flask : ModItem
+    public class Small_Pewter_Flask : ModItem
     {
 
         private int PewterHealing;
@@ -42,7 +42,7 @@ namespace AllomancyMOD.Content.Items.Consumables
         {
             var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
 
-            if (aPewterPlayer.PewterCurrent < aPewterPlayer.NewPewterMax)
+            if (aPewterPlayer.PewterCurrent < aPewterPlayer.CurrentPewterMax)
             {
                 return true;
             }
@@ -60,7 +60,7 @@ namespace AllomancyMOD.Content.Items.Consumables
 
             var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
 
-            int dif = aPewterPlayer.NewPewterMax - aPewterPlayer.PewterCurrent;
+            float dif = aPewterPlayer.CurrentPewterMax - aPewterPlayer.PewterCurrent;
 
             if (dif < PewterHealing)
             {

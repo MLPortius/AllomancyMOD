@@ -6,7 +6,7 @@ using Terraria.GameContent.Creative;
 
 namespace AllomancyMOD.Content.Items.Weapons
 {
-    internal class KolossSword : ModItem
+    public class KolossSword : ModItem
     {
 
         public bool IsMetal() {return true;}
@@ -66,24 +66,6 @@ namespace AllomancyMOD.Content.Items.Weapons
             // 60 frames = 1 second
             target.AddBuff(BuffID.BrokenArmor, 1800);
         }
-
-        public override void AddRecipes() {
-
-            // Temporal
-            Recipe recipe3 = Recipe.Create(ModContent.ItemType<Items.Weapons.KolossSword>(), 1);
-            recipe3.AddIngredient(ItemID.Wood, 10);
-            recipe3.Register();
-
-
-            var resultItem = ModContent.GetInstance<Items.Weapons.KolossSword>();
-            // Start a new Recipe.
-            resultItem.CreateRecipe()
-                .AddRecipeGroup(RecipeGroupID.Wood, 10)
-                .AddRecipeGroup(RecipeGroupID.IronBar, 50)
-                .AddTile(TileID.Anvils)
-                .Register();
-        }
-
     }
 }
     

@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 namespace AllomancyMOD.Content.Tiles
 {
 
-    public class MetalGrinder_Tile : ModTile
+    public class MetallurgyTable_Tile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -24,14 +24,21 @@ namespace AllomancyMOD.Content.Tiles
             AdjTiles = new int[] { TileID.WorkBenches };
 
             // Placement
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            //TileObjectData.Initialize();
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
+            //TileObjectData.newTile.Origin = new Point16(4,3);
+            TileObjectData.newTile.Width = 4;
+            TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
+            TileObjectData.newTile.CoordinateWidth = 16;
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 /*, 16*/ };
             TileObjectData.addTile(Type);
+
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             // Etc
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Metal Grinder");
+            name.SetDefault("Metallurgy Table");
             AddMapEntry(new Color(200, 200, 200), name);
 
         }
@@ -43,7 +50,7 @@ namespace AllomancyMOD.Content.Tiles
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 34, 34, ModContent.ItemType<Items.Stations.MetalGrinder>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 34, 34, ModContent.ItemType<Items.Stations.MetallurgyTable>());
         }
     }
 }

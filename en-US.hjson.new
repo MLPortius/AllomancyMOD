@@ -52,6 +52,11 @@ Mods: {
 				Tooltip: "'A tiny splinter of the investiture inside all living beings...'"
 			}
 
+			MetalGrinder: {
+				DisplayName: Metal Grinder
+				Tooltip: You can use it to do dusty things...
+			}
+
 			KolossSword: {
 				DisplayName: Koloss Sword
 				Tooltip:
@@ -64,5 +69,7 @@ Mods: {
 					'''
 			}
 		}
+
+		Tiles.MetalGrinder_Tile.MapEntry: Metal Grinder
 	}
 }

@@ -22,7 +22,7 @@ namespace AllomancyMOD.Common.ItemDropRules.DropConditions
                     return false;
                 }
 
-                if (/*!Main.hardMode ||*/ npc.lifeMax <= 1 || npc.friendly /*|| npc.position.Y <= Main.rockLayer * 16.0*/ || npc.value < 1f)
+                if (/*!Main.hardMode ||*/ npc.lifeMax <= 1 || npc.friendly /*|| npc.position.Y <= Main.rockLayer * 16.0*/ /*|| npc.value < 1f*/)
                 {
                     return false;
                 }
