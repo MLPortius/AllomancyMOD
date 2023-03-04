@@ -25,8 +25,8 @@ namespace AllomancyMOD.Content.Tiles
 
             // Placement
             //TileObjectData.Initialize();
-            //TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
-            TileObjectData.newTile.Origin = new Point16(4,3);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
+            //TileObjectData.newTile.Origin = new Point16(4,3);
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.StyleHorizontal = true;

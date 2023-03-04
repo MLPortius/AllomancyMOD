@@ -38,10 +38,10 @@ namespace AllomancyMOD.Content
 
             var re11 = ModContent.GetInstance<Items.Materials.Allomantic_Pewter_Bar>();
             re11.CreateRecipe()
-                .AddIngredient(ItemID.CopperBar, 4)
-                .AddIngredient(ItemID.TinBar, 12)
+                .AddIngredient(ItemID.CopperBar, 8)
+                .AddIngredient(ItemID.TinBar, 16)
                 .AddIngredient(ModContent.GetInstance<Items.Materials.Tiny_Investiture_Spark>(), 16)
-                .AddTile(ModContent.GetInstance<Tiles.MetalGrinder_Tile>())
+                .AddTile(ModContent.GetInstance<Tiles.MetallurgyTable_Tile>())
                 .Register();
 
 

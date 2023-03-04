@@ -60,7 +60,7 @@ namespace AllomancyMOD.Content.Items.Consumables
 
             var aPewterPlayer = player.GetModPlayer<AllomanticPewterPlayer>();
 
-            int dif = aPewterPlayer.CurrentPewterMax - aPewterPlayer.PewterCurrent;
+            float dif = aPewterPlayer.CurrentPewterMax - aPewterPlayer.PewterCurrent;
 
             if (dif < PewterHealing)
             {
